@@ -26,7 +26,7 @@
 import streamlit as st
 import pages.home as home
 import pages.model_comparison as model_comparison
-import pages.data_visualization as data_visualization
+import pages.model_metrics as model_metrics
 import pages.about as about
 
 st.set_page_config(
@@ -44,6 +44,6 @@ with tabs[0]:
 with tabs[1]:
     model_comparison.display()
 with tabs[2]:
-    data_visualization.display()
+    model_metrics.display()
 with tabs[3]:
     about.display()
