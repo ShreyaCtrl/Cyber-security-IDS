@@ -24,9 +24,6 @@
 #     st.write("Learn more about this app.")
 
 import streamlit as st
-import pages.home as home
-import pages.model_comparison as model_comparison
-import pages.model_metrics as model_metrics
 
 st.set_page_config(
     page_title="KDD App",
@@ -34,8 +31,14 @@ st.set_page_config(
     layout="wide",
 )
 
+import pages.home as home
+import pages.model_comparison as model_comparison
+import pages.model_metrics as model_metrics
+import pages.explore_data as explore_data
+import pages.our_model as our_model
+
 # Create tabs for navigation
-tabs = st.tabs(["🏠 Home", "📊 Model Comparison", "📈 Model Metrics"])
+tabs = st.tabs(["🏠 Home", "📊 Model Comparison", "📈 Model Metrics", "📊 Data Visualization", "🧩 Our model"])
 
 # Render content in each tab
 with tabs[0]:
@@ -44,4 +47,7 @@ with tabs[1]:
     model_comparison.display()
 with tabs[2]:
     model_metrics.display()
-
+with tabs[3]:
+    explore_data.display()
+with tabs[4]:
+    our_model.display()

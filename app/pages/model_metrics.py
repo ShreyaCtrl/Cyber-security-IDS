@@ -505,6 +505,7 @@ def display():
             testy_path = "assets/testy.csv"
 
         model_path = model_choices[selected_model]
+        model_vis.description(selected_model)
 
         try:
             # Load model and dataset
